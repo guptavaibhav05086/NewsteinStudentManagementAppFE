@@ -1,0 +1,64 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand navbar-topcolor" href="#">WebSiteName</a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="navbar-topcolor"> Upgrade Plan</a></li>
+            <li><a href="#" class="navbar-topcolor"><span class="glyphicon glyphicon-info-sign" style="font-size:13px;margin-right:5px"></span> Help</a></li>
+            <div class="btn-group dropdown" uib-dropdown="" style="margin-top: 10px;margin-right: 20px;margin-left: 15px;">
+                <button id="split-button" type="button" class="btn " style="background-color:#222;color:#fff">Hi Vaibhav</button>
+                <button type="button" class="btn dropdown-toggle" uib-dropdown-toggle="" style="background-color:#222;color:white" aria-haspopup="true" aria-expanded="false">
+                    <span class="caret" style="border-top-color:white"></span>
+                    <span class="sr-only">Split button!</span>
+                </button>
+                <ul class="dropdown-menu" uib-dropdown-menu="" role="menu" aria-labelledby="split-button">
+                    <li role="menuitem"><a href="#"><span class="glyphicon glyphicon-cog" style="font-size:10px;margin-right:5px"></span>Account Settings</a></li>
+                    <li role="menuitem"><a href="../HTML/Preferences.html?choice=profile"><span class="glyphicon glyphicon-user" style="font-size:10px;margin-right:5px"></span>My Profile</a></li>
+                    <li role="menuitem"><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li role="menuitem"><a href="#" data-ng-click="logOut()"><span class="glyphicon glyphicon-off"></span> LogOut</a></li>
+                </ul>
+            </div>
+            <!--<li><a href="#" data-ng-click="Login()"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>-->
+        </ul>
+
+    </div>
+</nav>
+
+<div class="col-10 headerTop">
+    
+
+    <div class="userOverview">
+        <nav style="display:none" class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="navLinkLi"><a href="../HTML/ProfilePage.html" class="navLink active">DashBoard</a></li>
+                    <!--<li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Page 1
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>-->
+                    <li class="navLinkLi"><a href="../HTML/Preferences.html#?choice=preference" class="navLink">Preference</a></li>
+                    <li class="navLinkLi"><a href="../HTML/Preferences.html#?choice=profile" class="navLink">Profile</a></li>
+                    <li class="navLinkLi"><a href="#" class="navLink">Search</a></li>
+                    <li class="navLinkLi"><a href="#" class="navLink">Plan</a></li>
+                </ul>
+            </div>
+        </nav>
+       
+    </div>
+    <div class="col-8 userDetails duserDetails">
+        
+    </div>
+</div>

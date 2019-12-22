@@ -1,0 +1,190 @@
+﻿body {
+    width:1304px;
+}
+/*.containerHome{
+    width:1350px;
+    margin-left:10%;
+    margin-right:10%;
+
+}*/
+.loginTop{
+ width:100%;
+ clear:both;
+ float:left;
+}
+.slider{
+     width:100%;
+      clear:both;
+ float:left;
+}
+img {
+    width:100%;
+    height:400px;
+}
+
+/****Partner Site Carousel*/
+.carouselProfile{
+    position:relative;
+    margin-left:30px;
+}
+.slideMatch {
+    float:left;
+    width:20%;
+    margin-top:15px;
+    display:block;
+  overflow:hidden;
+  height:250px;
+  margin-left:3px;
+  border: 1px solid black;
+  font-size: smaller;
+    font-style: italic;
+}
+.slideMatchShadow {
+    
+    box-shadow: 0 4px 15px 0 black, 0 6px 20px 0 black;
+}
+.slideMatchHidden {
+     float:left;
+    width:20%;
+    margin-top:5px;
+    display:none;
+  overflow:hidden;
+}
+.mtcName {
+    float:left;
+    width:100%;
+}
+.mtcDtls {
+    margin-top:3px;
+    clear:both;
+    float:left;
+    /*margin-left:20%;*/
+    /*width:50%;*/
+}
+/*****End Partner site carousel*/
+
+.profiles{
+     /*width:1304px;*/
+     width:95%;
+      clear:both;
+ float:left;
+ margin-top:100px;
+ margin-left:5%;
+}
+.footer{
+ width:1350px;
+  clear:both;
+ float:left;
+ background-color:#405765;
+}
+.partnerSites{
+     width:1350px;
+      clear:both;
+ float:left;
+}
+.vendorheading {
+    text-align: center;
+    font-weight: bolder;
+}
+.profileTop{
+    float:left;
+    width:40%;
+    margin-left:5%;
+    margin-top:15px;
+}
+.profileBottom{
+    clear:both;
+    float:left;
+    width:40%;
+    margin-left:5%;
+    margin-top:15px;
+}
+.loginInput{
+    width:80%;
+}
+
+.loginDetails{
+    margin-left:20%;
+    margin-top:50px;
+}
+.signIn{
+    clear:both;
+    /*margin-left:30%;*/
+    margin-top:50px;
+}
+.signInStay{
+    float:left;
+    /*font-size:large;
+    color:gray;*/
+    color:dimgrey;
+    font-size:16px
+}
+.remberMe{
+    float:left;
+    /*width:80%;*/
+}
+.forgotPassWord{
+    float:right;
+    margin-top:10px;
+    margin-left:40px;
+}
+.modal-dialog{
+    width:450px;
+    padding-top:150px;
+}
+.modal-body{
+height:400px;
+}
+.btn-warning{
+    background-color:white;
+    border-color:white;
+}
+.signUp{
+    clear:both;
+    float:left;
+    margin-top:10px;
+    
+    
+}
+.loginHeading{
+    clear:both;
+    font-size:20px;
+    color:#51505d;
+    font-family:'Roboto',sans-serif !important;
+    margin-left:20%;
+}
+.tellus{
+    float:left;
+    width:100%;
+}
+.loginDetailsTellus{
+
+}
+.btnNext{
+    text-align:center;
+}
+/*input.ng-invalid {
+    border-color:red;
+}*/
+.imgBaneerClass{
+    float:left;
+    /*//height:600px;*/
+    background:url(../../Images/home-banner-ri.jpg),no-repeat,center,center;
+
+}
+.loadingIcon{
+    clear:both;
+    margin-left:20%;
+}
+
+.flex-container {
+    display:flex;
+    width:100%;
+    height:400px;
+}
+.flex-item{
+    width:18%;
+    margin-left:2%;
+    margin-top:50px;
+    height:300px;
+}

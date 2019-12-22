@@ -1,0 +1,98 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">
+</ngx-loading>
+<div class="card-body"><h1>Dashboard</h1></div>
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Total Active Students</h5>
+
+      <p class="card-text">
+        Total Students Undergoing Training with Newstein
+      </p>
+      <a href="#" class="card-link">{{
+        pageData.totalActiveStudents.TotalActiveStudents
+      }}</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Total Income</h5>
+
+      <p class="card-text">
+        Total Income for Newstein from all sources Till date
+      </p>
+      <a href="#" class="card-link">{{ pageData.totalFinances.Credit }}</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Total Expenses</h5>
+
+      <p class="card-text">
+        Total Expenses for Newstein Till date
+      </p>
+      <a href="#" class="card-link">{{ pageData.totalFinances.Debit }}</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Due Date</h5>
+
+      <p class="card-text">
+        Number of students for whom Due date is passed for the payments
+      </p>
+      <a href="#" class="card-link">{{
+        pageData.dueDatePassed.DueDateCount
+      }}</a>
+    </div>
+  </div>
+</div>
+<div class="card-body"><h1>Owners Liability</h1></div>
+<div class="container">
+  <div class="card" style="width: 18rem;" *ngIf="pageData.totalLibality.Anish">
+    <div class="card-body">
+      <h5 class="card-title">Anish</h5>
+
+      <div>
+        <a href="#" class="card-link">{{ pageData.totalLibality.Anish }}</a>
+      </div>
+    </div>
+  </div>
+  <div
+    class="card"
+    style="width: 18rem;"
+    *ngIf="pageData.totalLibality.Vaibhav"
+  >
+    <div class="card-body">
+      <h5 class="card-title">Vaibhav</h5>
+
+      <div>
+        <a href="#" class="card-link">{{ pageData.totalLibality.Vaibhav }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;" *ngIf="pageData.totalLibality.Gaurav">
+    <div class="card-body">
+      <h5 class="card-title">Gaurav</h5>
+
+      <p class="card-text">
+        Total Expenses for Newstein Till date
+      </p>
+      <div>
+        <a href="#" class="card-link">{{ pageData.totalLibality.Gaurav }}</a>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;" *ngIf="pageData.totalLibality.Lavish">
+    <div class="card-body">
+      <h5 class="card-title">Lavish</h5>
+
+      <p class="card-text">
+        Number of students for whom Due date is passed for the payments
+      </p>
+      <div>
+        <a href="#" class="card-link">{{ pageData.totalLibality.Lavish }}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="modal-header">
+    <h4 class="modal-title">Transaction Details</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="container">
+      <div>
+        
+        <form  #heroForm="ngForm">
+          <div class="form-group">
+            <label for="TransactionType">Transaction Type</label>
+            <select class="form-control" id="TransactionType"
+                    required
+                    [(ngModel)]="model.TransactionType" name="TransactionType"
+                    #TransactionType="ngModel" (change)="manageControls($event.target.value)">
+              <option *ngFor="let type of types.TranTypes" [value]="type">
+                  {{type}}</option>
+            </select>
+            <!-- <input type="text" class="form-control" id="name"
+                   required
+                   [(ngModel)]="model.TransactionType" name="name"
+                   #name="ngModel"> -->
+            <div [hidden]="TransactionType.valid || TransactionType.pristine"
+                 class="alert alert-danger">
+              Name is required
+            </div>
+          </div>
+    
+          <div class="form-group">
+                <label for="PaidBy">Paid By</label>
+               
+                <select class="form-control" id="studentId"
+                
+                [(ngModel)]="model.StudentId" name="studentId"
+                #studentId="ngModel" (change)="checkSelected($event.target.value)" *ngIf="toggleCredit">
+          <option *ngFor="let type of students" [value]="type.studentId">
+              {{type.userName}}</option>
+              <option [value]="0">Others</option>
+        </select>
+        
+        <select class="form-control" id="studentId"
+                
+        [(ngModel)]="model.PaidBy" name="studentId"
+        #studentId="ngModel" (change)="checkSelected($event.target.value)" *ngIf="!toggleCredit">
+        <option *ngFor="let type of types.PaidTo" [value]="type">
+          {{type}}</option>
+</select>
+
+                <input type="text" *ngIf="displayOthers" class="form-control" id="PaidBy"
+                       [(ngModel)]="model.PaidBy" name="PaidBy" placeholder="provide paid by name" style="margin-top: 10px;">
+              </div>
+              <div class="form-group">
+                    <label for="PaidTo">Paid To</label>
+                    <select class="form-control" id="PaidTo"
+                    required
+                    [(ngModel)]="model.PaidTo" name="PaidTo" *ngIf="toggleCredit"
+                    #power="ngModel">
+              <option *ngFor="let type of types.PaidTo" [value]="type">
+                  {{type}}</option>
+            </select>
+                    <input type="text" class="form-control" id="PaidTo" *ngIf="!toggleCredit"
+                           [(ngModel)]="model.PaidTo" name="PaidTo">
+                  </div>
+                  
+                  
+                  <div class="form-group">
+                        <label for="Amount">Amount</label>
+                        <input type="number" class="form-control" id="Amount"
+                               [(ngModel)]="model.Amount" name="Amount" #Amount='ngModel' required>
+                               <div [hidden]="Amount.valid || Amount.pristine"
+                 class="alert alert-danger">
+                 Amount is required
+            </div>
+                      </div>
+    
+          <div class="form-group">
+            <label for="TransactionMode">Mode</label>
+            <select class="form-control" id="power"
+                    required
+                    [(ngModel)]="model.TransactionMode" name="TransactionMode"
+                    #TransactionMode="ngModel">
+              <option *ngFor="let mode of types.TranMode" [value]="mode">
+                  {{mode}}</option>
+            </select>
+             
+            </div>
+           
+            <div class="form-group">
+                <label for="Comment">Comment</label>
+                <input type="text" class="form-control" id="Comment"
+                       [(ngModel)]="model.Comment" name="Comment">
+              </div>
+          
+          
+                
+                   
+                   
+                    <ngb-alert [type]="success" *ngIf="savedToserver" class="alert alert-success alert-dismissible" (close)="close(alert)">Transaction Deatils Saved</ngb-alert>
+                        <ngb-alert [type]="danger" *ngIf="!savedToserver" (close)="close(alert)">Some Thing went wrong</ngb-alert>
+                    <div class="modal-footer">
+                        
+                        <button type="button" class="btn btn-success" [disabled]="!heroForm.form.valid" (click)="updateTransaction()">Submit</button>
+                        
+                      <button type="button" class="btn btn-outline-dark" (click)="closeModal()">Close</button>
+                    </div>
+          
+        </form>
+      </div>
+    
+      
+    

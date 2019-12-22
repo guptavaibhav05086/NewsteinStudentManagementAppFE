@@ -1,0 +1,49 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">
+</ngx-loading>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Type</th>
+        <th scope="col">Paid By</th>
+        <th scope="col">Paid To</th>
+        <th scope="col">Amount</th>
+        
+        <th scope="col">Date</th>
+        <th scope="col">Mode</th>
+        <th scope="col">Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of Transactions">
+        <th scope="row">{{ transaction.TransactionId }}</th>
+        <td>{{ transaction.TransactionType }}</td>
+        <td>{{ transaction.PaidBy }}</td>
+        <td>{{ transaction.PaidTo }}</td>
+        <td>{{ transaction.Amount }}</td>
+        <td>{{ transaction.TransactionDate }}</td>
+        <td>{{ transaction.TransactionMode }}</td>
+        <td>{{ transaction.Comment }}</td>
+        <td><button type="button" class="btn btn-primary" (click)="Open(transaction)">Edit</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination
+      [collectionSize]="collectionSize"
+      [(page)]="page"
+      [pageSize]="pageSize"
+    >
+    </ngb-pagination>
+  
+    <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+      <option [ngValue]="2">2 items per page</option>
+      <option [ngValue]="4">4 items per page</option>
+      <option [ngValue]="6">6 items per page</option>
+    </select>
+  </div>
+  <div style="text-align: center;">
+    <button type="button" class="btn btn-primary" (click)="Open(null)">+ Add New Transaction</button>
+  </div>
+  

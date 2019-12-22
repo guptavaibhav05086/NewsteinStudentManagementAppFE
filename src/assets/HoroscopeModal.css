@@ -1,0 +1,22 @@
+﻿table {
+    border: 1px solid lightblue;
+    width:100%;
+}
+.trAlternate{
+     background-color:#e6f2ff;
+}
+table{
+border:1px solid lightblue;
+}
+.prediction{
+    float:left;
+    width:75%;
+}
+.Points{
+    float:left;
+    margin-left:3%;
+    width:20%;
+}
+.modal-content{
+    width:600px;
+}

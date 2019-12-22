@@ -1,0 +1,59 @@
+﻿body{
+    background-color:lightgray;
+}
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 10%;}
+    .col-2 {width: 20%;}
+    .col-3 {width: 30%;}
+    .col-4 {width: 40%;}
+    .col-5 {width: 50%;}
+    .col-6 {width: 60%;}
+    .col-7 {width: 70%;}
+    .col-8 {width: 80%;}
+    .col-9 {width: 90%;}
+    .col-10 {width: 100%;}
+    
+    .col-11 {width: 8%;}
+
+
+     .dlinkGroup{
+    float:left;
+    clear:both;
+    margin-left:10%;
+}
+   .dlink {
+    float:left;
+   width:20%;
+   margin-left:5%;
+    margin-top:10px;
+    color:darkslategray;
+    font-size:x-small;
+}
+   
+    .margin{
+         float:left;
+        margin-left:60px !important;
+    }
+    /*.col-12 {width: 100%;}*/
+}
+
+input[type=file] {
+    /* display: none; */
+    color: transparent;
+    margin-left: 25%;
+    margin-top:10px
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    margin-top: 10px;
+}

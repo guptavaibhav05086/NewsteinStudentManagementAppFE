@@ -1,0 +1,360 @@
+﻿body {
+    /*width:1304px;*/
+    background-color:lightgray;
+}
+
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    width: 100%;
+}
+.btnSliderBottom {
+    float:left;text-align:center;
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 10%;}
+    .col-2 {width: 20%;}
+    .col-3 {width: 30%;}
+    .col-4 {width: 40%;}
+    .col-5 {width: 50%;}
+    .col-6 {width: 60%;}
+    .col-7 {width: 70%;}
+    .col-8 {width: 80%;}
+    .col-9 {width: 90%;}
+    .col-10 {width: 100%;}
+    .btnSliderBottom {
+    float:left;padding-top:60px;text-align:center;
+}
+    .col-11 {width: 8%;}
+    .col-12 {width: 9%;}
+
+    .dlinkGroup{
+    float:left;
+    clear:both;
+    margin-left:20%;
+}
+   .dlink {
+    float:left;
+   width:20%;
+   margin-left:5%;
+    margin-top:10px;
+    color:darkslategray;
+    font-size:x-small;
+}
+   .col-sm-3 {
+    width: 25% !important;
+}
+}
+/*.containerHome{
+    width:1350px;
+    margin-left:10%;
+    margin-right:10%;
+
+}*/
+.loginTop{
+ width:100%;
+ clear:both;
+ float:left;
+}
+.slider{
+     width:100%;
+      clear:both;
+ float:left;
+}
+img {
+    width:100%;
+    /*height:400px;*/
+}
+
+/****Partner Site Carousel*/
+.carouselProfile{
+    position:relative;
+    margin-left:30px;
+}
+.slideMatch {
+    float:left;
+    /*width:20%;*/
+    margin-top:15px;
+    display:block;
+  overflow:hidden;
+  height:250px;
+  margin-left:.5%;
+  border: 1px solid black;
+  font-size: smaller;
+    font-style: italic;
+}
+.slideMatchShadow {
+    
+    box-shadow: 0 4px 15px 0 black, 0 6px 20px 0 black;
+}
+.slideMatchHidden {
+     float:left;
+    width:20%;
+    margin-top:5px;
+    display:none;
+  overflow:hidden;
+}
+.mtcName {
+    float:left;
+    width:100%;
+}
+.mtcDtls {
+    margin-top:3px;
+    clear:both;
+    float:left;
+    /*margin-left:20%;*/
+    /*width:50%;*/
+}
+/*****End Partner site carousel*/
+
+.profiles{
+     /*width:1304px;*/
+     width:95%;
+      clear:both;
+ float:left;
+ margin-top:100px;
+ margin-left:5%;
+}
+.footer{
+ width:100%;
+  clear:both;
+ float:left;
+}
+/*.partnerSites{
+     width:1350px;
+      clear:both;
+ float:left;
+}*/
+.vendorheading {
+    text-align: center;
+    font-weight: bolder;
+}
+.profileTop{
+    float:left;
+    width:40%;
+    margin-left:5%;
+    margin-top:15px;
+}
+.profileBottom{
+    clear:both;
+    float:left;
+    width:40%;
+    margin-left:5%;
+    margin-top:15px;
+}
+.loginInput{
+    width:80%;
+}
+
+.loginDetails{
+    margin-left:20%;
+    margin-top:50px;
+}
+.signIn{
+    clear:both;
+    /*margin-left:30%;*/
+    margin-top:50px;
+}
+.signInNoMargin{
+    clear:both;
+    /*margin-left:30%;*/
+    
+}
+.signInStay{
+    float:left;
+    /*font-size:large;
+    color:gray;*/
+    color:dimgrey;
+    font-size:12px
+}
+.remberMe{
+    float:left;
+    /*width:80%;*/
+}
+.forgotPassWord{
+    float:right;
+    margin-top:10px;
+    margin-left:40px;
+}
+.modal-dialog{
+    width:450px;
+    padding-top:100px;
+}
+.modal-body{
+height:400px;
+}
+.btn-warning{
+    background-color:white;
+    border-color:white;
+}
+.signUp{
+    clear:both;
+    float:left;
+    margin-top:10px;
+    
+    
+}
+.loginHeading{
+    clear:both;
+    font-size:20px;
+    color:#51505d;
+    font-family:'Roboto',sans-serif !important;
+    margin-left:25%;
+}
+.loginHeadingSmall{
+     clear:both;
+    font-size:14px;
+    color:#51505d;
+    font-family:'Roboto',sans-serif !important;
+    margin-left:20%;
+}
+.tellus{
+    float:left;
+    width:100%;
+}
+.loginDetailsTellus{
+
+}
+.btnNext{
+    text-align:center;
+}
+/*input.ng-invalid {
+    border-color:red;
+}*/
+.footer {
+    clear:both;
+    float:left;
+    width:100%;
+    margin-bottom:20px;
+    background-color:#405765;
+    /*margin-top:40px;*/
+    
+}
+.links {
+    float:left;
+   width:100%;
+    margin-left:5%;
+}
+.link {
+    float:left;
+   width:15%;
+   margin-left:2%;
+    margin-top:10px;
+    color:darkslategray;
+    font-size:x-small;
+}
+.linkGroup{
+    float:left;
+    clear:both;
+    /*margin-left:10%;*/
+}
+.partnerSites{
+    float:left;
+    margin-bottom:15px;
+   color:white;
+    margin-left:5%;
+}
+.disclaimer{
+    float:left;
+}
+/*a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}*/
+.a{
+    color:black !important;
+}
+.anchorFooter{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+.alert{
+    padding:0px !important;
+    padding-top:5px !important;
+    text-align:center !important;
+}
+.imgBaneerClass{
+    
+    height:600px;
+    background:url('../../Images/Home_Page-bicubic.png'),no-repeat,center,center;
+    /*background:url(https://img2.shaadi.com/assests/2016/images/home-banner-ri.jpg),no-repeat,center,center;*/
+
+}
+.imgBaneerInstructionsClass{
+    /*margin-top:10px;*/
+    height:400px;
+    /*background:url(../../Images/home-banner-ri.jpg),no-repeat,center,center;*/
+    /*background:url(http://www.jodiimakers.com/Images/PortalInstructions.png),no-repeat,center,center;*/
+
+}
+.imgBaneerFeatureClass{
+    /*margin-top:10px;*/
+    height:260px;
+    /*background:url(../../Images/home-banner-ri.jpg),no-repeat,center,center;*/
+    /*background:url(http://www.jodiimakers.com/Images/PortalInstructions.png),no-repeat,center,center;*/
+
+}
+
+.containerImage{
+    clear: both;
+    float: left;
+    margin-top: 350px;
+    color: white;
+    font-size: 30px;
+    margin-left: 10%;
+    /*background:url(https://img2.shaadi.com/assests/2016/images/home-banner-ri.jpg),no-repeat,center,center;*/
+    height:70px;
+    width:1000px;
+    font-family:precious;
+}
+.caste_:hover{
+    display:block;
+}
+
+
+/*.mnav-wid2 {
+    width: 80%;
+}*/
+.newLogoWidthLoggedOut {
+    width: 15% !important;
+}
+.loadingIcon{
+    clear:both;
+    margin-left:20%;
+}
+.flex-container {
+    display:flex;
+    width:100%;
+    height:400px;
+}
+.flex-item{
+    width:18%;
+    margin-left:2%;
+    margin-top:50px;
+    height:300px;
+    color:white;
+}
+.circleClass{
+    border: 1px solid white;
+    border-radius: 65px;
+    /* height: 200px; */
+    width: 130px;
+    height: 130px;
+    background-color:white;
+}
+.flex-container-feature{
+    display:flex;
+    width:100%;
+    height:250px;
+    background-color:darkred;
+}
+.flex-item-feature{
+    width:50%;
+    color:white;
+}

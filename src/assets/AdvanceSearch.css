@@ -1,0 +1,201 @@
+﻿body{
+    background-color:lightgray;
+}
+* {
+    box-sizing: border-box;
+}
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 10%;}
+    .col-2 {width: 20%;}
+    .col-3 {width: 30%;}
+    .col-4 {width: 40%;}
+    .col-5 {width: 50%;}
+    .col-6 {width: 60%;}
+    .col-7 {width: 70%;}
+    .col-8 {width: 80%;}
+    .col-9 {width: 90%;}
+    .col-10 {width: 100%;}
+    
+    .col-11 {width: 8%;}
+      .col-12 {width: 15%;}
+
+
+     .dlinkGroup{
+    float:left;
+    clear:both;
+    margin-left:10%;
+}
+   .dlink {
+    float:left;
+   width:20%;
+   margin-left:5%;
+    margin-top:10px;
+    color:darkslategray;
+    font-size:x-small;
+}
+    .controlsData{
+    /*margin-left:20%;*/
+    background-color:white;
+    margin-top:40px;
+    float:left;
+}
+     .controlsDataPrefer{
+    /*margin-left:15%;*/
+    background-color:white;
+    margin-top:40px;
+    float:left;
+}
+    .controlDropDown{
+    width:70%;
+    margin-left:30px;
+    float:left;
+    
+}
+    .margin{
+         float:left;
+        margin-left:60px !important;
+    }
+    /*.col-12 {width: 100%;}*/
+}
+.logoTop{
+    background-color:white;
+    box-shadow:10px 10px 5px gray;
+    margin-top:30px;
+    height:100px;
+}
+.controlsData{
+    /*margin-left:30%;*/
+    background-color:white;
+    margin-top:40px;
+    float:left;
+}
+.controlsDataPrefer{
+    background-color:white;
+    margin-top:40px;
+    float:left;
+}
+.labels{
+    float:left;
+    margin-top:5px;
+     font-weight:normal;
+}
+.controlDropDown{
+    width:70%;
+    /*margin-left:30px;*/
+    float:left;
+    height:40px;
+    
+}
+.divLable{
+    float:left;
+    color:#b1b3b9;
+   
+    /*width:20%;*/
+}
+.divDDl{
+    float:left;
+    /*width:70%;*/
+}
+.cellControl{
+    clear:both;
+    float:left;
+    margin-top:20px;
+    width:100%;
+    margin-left:5%;
+}
+ .cellControlHeading{
+     clear:both;
+    float:left;
+    margin-top:20px;
+    width:100%;
+     text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: 0%;
+ }
+ .panel-group .panel{
+     overflow:initial;
+ }
+ .panel{
+     border:0px;
+     box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+ }
+ .panel-default>.panel-heading{
+     background-color: #5a739b;
+      box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+ }
+ .alertMessage{
+    margin-top: 10px;
+    clear: both;
+    width: 60%;
+    margin-left: 10%;
+
+ }
+ .profileHeading{
+         font-size: large;
+    /*margin-left: 30%;*/
+    text-align:center;
+    color: darkgreen;
+    margin-bottom: 20px;
+    margin-top: 10px;
+ }
+
+ nav.MenuTop {
+    margin-top: 30px;
+    margin-left: 10%;
+}
+ a.dashBoard :hover{
+     color:white !important;
+     text-decoration:none !important;
+ }
+ }
+ a.dashBoard{
+    text-decoration:none !important;
+ }
+
+ .modal-dialog{
+    width:450px;
+    padding-top:150px;
+}
+.modal-body{
+height:400px;
+}
+
+span.glyphicon.glyphicon-ok-circle.ng-scope {
+    font-size: 20px;
+    color: green;
+}
+
+span.glyphicon.glyphicon-warning-sign.ng-scope {
+    font-size: 15px;
+    color: red;
+}
+.imgBaneerClass{
+    
+    height:300px;
+    /*background:url(../../Images/home-banner-ri.jpg),no-repeat,center,center;*/
+    background:url(https://img2.shaadi.com/assests/2016/images/home-banner-ri.jpg),no-repeat,center,center;
+
+}
+.panel-default>.panel-heading {
+    color: #333;
+    background-color: #f6f6f6;
+    border-color: #ddd;
+    text-align: center;
+        height: 70px;
+}
+.pull-right {
+    /* float: right!important; */
+}
+.ui-select-multiple.ui-select-bootstrap input.ui-select-search {
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    height: 40px;
+    margin-bottom: 3px;
+}

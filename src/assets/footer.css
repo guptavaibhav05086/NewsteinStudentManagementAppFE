@@ -1,0 +1,40 @@
+﻿.footer {
+    clear:both;
+    float:left;
+    width:100%;
+    margin-bottom:20px;
+    background-color:#405765;
+    /*margin-top:40px;*/
+    
+}
+.links {
+    float:left;
+   width:100%;
+    margin-left:5%;
+}
+.link {
+    float:left;
+   width:15%;
+   margin-left:2%;
+    margin-top:10px;
+    color:darkslategray;
+    font-size:x-small;
+}
+.linkGroup{
+    float:left;
+    clear:both;
+    /*margin-left:10%;*/
+}
+/*a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}*/
+.a{
+    color:black !important;
+}
+.anchorFooter{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}

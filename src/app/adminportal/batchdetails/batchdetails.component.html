@@ -1,0 +1,41 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch Name</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Module Name</th>
+      <th scope="col">Instructor Name</th>
+      <th scope="col">ModuleName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let batch of batchesData">
+      <th scope="row">{{ batch.BatchId }}</th>
+      <td>{{ batch.BatchName }}</td>
+      <td>{{ batch.BatchStartDate }}</td>
+      <td>{{ batch.ModuleName }}</td>
+      <td>{{ batch.Instructorname }}</td>
+      <td>{{ batch.ModuleName }}</td>
+      <td><button type="button" class="btn btn-primary" (click)="Open(batch)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination
+    [collectionSize]="collectionSize"
+    [(page)]="page"
+    [pageSize]="pageSize"
+  >
+  </ngb-pagination>
+
+  <select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select>
+</div>
+<div style="text-align: center;">
+  <button type="button" class="btn btn-primary" (click)="Open(null)">+ Add New Batch</button>
+</div>

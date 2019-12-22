@@ -1,0 +1,89 @@
+<div class="bg-img">
+  <app-headerhome></app-headerhome>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <td style="width:65%">
+          <div class="card card-signin my-6 my-card-transparent">
+            <div class="card-body">
+              <h5 class="card-title text-center">ABOUT &nbsp; NLMP</h5>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  1. NLMP(Newstein Learning Management Portal) is the automated
+                  online software tool designed for Learning Management of the
+                  candidates.
+                </li>
+                <li class="list-group-item">
+                  2. NLMP is the tool powered by Newstein and designed by the
+                  highly experienced professional from the Training/IT industry
+                  in order to provide the seamless learning exeperince for
+                  potential candidates
+                </li>
+                <li class="list-group-item">
+                  3. As we in Newstein believe in delivering high impact
+                  training for each individual, this tool gives an insight for
+                  the each individual candidates and help us in customizing our
+                  trainings based on candidate capabilities.
+                </li>
+                <!-- <li class="list-group-item">4. Press skip to go to next question.</li> -->
+                <!-- <li class="list-group-item">
+                  4. In order to Start the Test Please enter your registered
+                  mobile number with us along with the test code which you have
+                  received on the your registered mail Id.
+                </li> -->
+                <!-- <li class="list-group-item">6. In refreshed, resume test with mobile number and test code.</li> -->
+                <li class="list-group-item"></li>
+              </ul>
+            </div>
+          </div>
+        </td>
+        <td>
+          <div class="card card-signin my-4">
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ title }}</h5>
+
+              <form>
+                <fieldset [disabled]="false">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email/UserName</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="model.username"
+                      name="model.username"
+                      placeholder="Enter Email/UserName"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      [(ngModel)]="model.password"
+                      name="model.password"
+                      placeholder="Enter Password"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <button
+                      class="btn btn-lg btn-primary btn-block text-uppercase"
+                      (click)="userLogin()"
+                      type="button"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <app-footerhome></app-footerhome>
+</div>

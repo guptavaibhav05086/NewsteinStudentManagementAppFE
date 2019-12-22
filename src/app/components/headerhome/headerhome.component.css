@@ -1,0 +1,39 @@
+a:hover {
+  cursor: pointer;
+}
+
+.img-height {
+  height: 90px;
+}
+
+.logo_image {
+  padding-left: 20px;
+  /* object-fit: none; */
+  width: 250px;
+  height: 65px;
+}
+.logo_Style {
+  /* background-color: black; */
+  height: 90px;
+  margin-left: -20px;
+  width: 60%;
+}
+
+navbar-dark .navbar-text a {
+  color: black !important;
+}
+a:hover {
+  color: skyblue !important;
+}
+.nav-fix {
+  display: flex;
+  background-color: white !important;
+}
+.nav-link {
+  color: black !important;
+  font-size: large;
+  font-weight: bold;
+}
+.nav-padding {
+  padding-top: 20px;
+}

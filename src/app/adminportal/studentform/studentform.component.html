@@ -1,0 +1,117 @@
+<div class="modal-header">
+  <h4 class="modal-title">Student Details</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="container">
+    <div>
+      
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+          <label for="name">Student Name</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="model.userName" name="name"
+                 #name="ngModel">
+          <div [hidden]="name.valid || name.pristine"
+               class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+        <div class="form-group" *ngIf="flagNewStudent">
+          <label for="Email">Email</label>
+          <input type="text" class="form-control" id="name"
+                 required
+                 [(ngModel)]="model.Email" name="Email"
+                 #Email="ngModel">
+          <div [hidden]="Email.valid || Email.pristine"
+               class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+        <div class="form-group"  *ngIf="flagNewStudent">
+          <label for="Password">Password</label>
+          <input type="text" class="form-control" id="Password"
+                 required
+                 [(ngModel)]="model.Password" name="Password"
+                 #Password="ngModel">
+          <div [hidden]="Password.valid || Password.pristine"
+               class="alert alert-danger">
+            Name is required
+          </div>
+        </div>
+       
+  
+        <div class="form-group">
+          <label for="power">Batch Name</label>
+          <select class="form-control" id="power"
+                  required
+                  [(ngModel)]="model.batchId" name="power"
+                  #power="ngModel">
+            <option *ngFor="let batch of batchDetails" [value]="batch.BatchId">
+                {{batch.BatchName}}</option>
+          </select>
+           
+          </div>
+          <div class="form-group">
+                <label for="power">Course Name</label>
+                <select class="form-control" id="course"
+                        required
+                        [(ngModel)]="model.courseId" name="course"
+                        #course="ngModel">
+                  <option *ngFor="let course of courseDetails" [value]="course.CourseId">
+                    {{course.CourseId}}-  {{course.CourseName}}</option>
+                </select>
+         
+        </div>
+        <div class="form-group">
+            <label for="status">Current status</label>
+            <select class="form-control" id="status"
+                    required
+                    [(ngModel)]="model.status" name="status"
+                    #course="ngModel">
+              <option *ngFor="let item of status" [value]="item">
+                  {{item}}</option>
+            </select>
+     
+    </div>
+        <div class="form-group">
+                <label for="totaFees">Total Fees</label>
+                <input type="text" class="form-control" id="totaFees"
+                       [(ngModel)]="model.totalFees" name="totaFees">
+              </div>
+              <div class="form-group">
+                    <label for="FeesPaid">Fees Paid</label>
+                    <input type="text" class="form-control" id="FeesPaid"
+                           [(ngModel)]="model.feesPaid" name="FeesPaid">
+                  </div>
+                  <div class="form-group">
+                    <label for="dateOfJoining">Date of Joining</label>
+                    <input type="date" class="form-control" id="dateOfJoining"
+                           [(ngModel)]="model.dateOfJoining" name="dateOfJoining">
+                  </div>
+                  <div class="form-group">
+                    <label for="dateOfPayment">Date of Payment</label>
+                    <input type="date" class="form-control" id="dateOfpayment"
+                           [(ngModel)]="model.dateOfPayment" name="dateOfpayment">
+                  </div>
+                  <div class="form-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" class="form-control" id="duedate"
+                           [(ngModel)]="model.dueDate" name="dueDate">
+                  </div>
+                  <ngb-alert [type]="success" *ngIf="flagSuccess" class="alert alert-success alert-dismissible" (close)="close(alert)">Student Deatils Saved</ngb-alert>
+                      <ngb-alert [type]="danger" *ngIf="flagError" (close)="close(alert)">Some Thing went wrong</ngb-alert>
+                  <div class="modal-footer">
+                      
+                      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+                      
+                    <button type="button" class="btn btn-outline-dark" (click)="onClose()">Close</button>
+                  </div>
+        
+      </form>
+    </div>
+  
+    
+  

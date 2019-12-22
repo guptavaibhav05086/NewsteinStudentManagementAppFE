@@ -1,0 +1,271 @@
+
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">
+</ngx-loading>
+<div class="col-9 userSummary duserSummary">
+    <div class="col-15" style="float:left;margin-left:10px;margin-top:50px">
+        <!-- <button class="btn btn-primary ng-hide" data-ng-click="sliderProfile(-1)" style="margin-top:20px;margin-bottom:20px" ng-disabled="disableBackword" ng-show="showSlider">&lt;</button> -->
+       </div>
+    <div class="col-13 UserImage">
+        <img style="height:150px;width:100%" src="../../../assets/img/noimages.png" alt="No Image">
+        
+    </div>
+    <div class="col-5 userDetailsData">
+        <div class="name ">
+            {{userDetails.userName}}
+        
+            
+       </div>
+        <div class="details">
+            <div class="detailsCol1 ">Course:</div>
+            <div class="detailsCol2 ">{{userDetails.courseDetails}}</div>
+            <div class="detailsCol3"></div>
+            <div class="detailsCol1 " style="clear:both;float:left">Start Date:</div>
+            <div class="detailsCol2 ">28-Nov-2019</div>
+            <div class="detailsCol3"></div>
+            <div class="detailsCol1 " style="clear:both;float:left">On Going Module:</div>
+            <div class="detailsCol2 ">{{userDetails.moduleName}}</div>
+            <div class="detailsCol3"></div>
+            <div class="detailsCol1 " style="clear:both;float:left">Instructor Name:</div>
+            <div class="detailsCol2 ">{{userDetails.instructorName}}</div>
+            <div class="detailsCol3"></div>
+        </div>
+    </div>
+    <div class="col-2 comDetails" style="color:white">
+        <div style="margin-left:30%;font-weight: bold;font-size:15px;">Fees Details</div>
+       
+            <div class="detailsCol1" style="margin-left:15%;margin-top:8px;font-size:15px;font-style: italic">Total Fees:</div>
+            <div class="detailsCol2" style="margin-top:8px;font-size:15px;font-style: italic">₹ {{userDetails.totalFees}}</div>
+            <div class="detailsCol1" style="margin-left:15%;margin-top:8px;font-size:15px;font-style: italic">Fees Paid:</div>
+            <div class="detailsCol2" style="margin-top:8px;font-size:15px;font-style: italic">₹ {{userDetails.feesPaid}}</div>
+            <div class="detailsCol1" style="margin-left:15%;margin-top:8px;font-size:15px;font-style: italic">Due Fees:</div>
+            <div class="detailsCol2" style="margin-top:8px;font-size:15px;font-style: italic">₹ {{userDetails.totalFees - userDetails.feesPaid}}</div>
+            <div class="detailsCol1" style="margin-left:15%;margin-top:8px;font-size:15px;font-style: italic">Due Date:</div>
+            <div class="detailsCol2" style="margin-top:8px;font-size:15px;font-style: italic">15-Dec-2019</div>
+
+
+
+
+       
+    </div>
+    <div class="col-15" style="float:left;margin-left:10px;margin-top:50px">
+        <!--<button class="btn btn-primary" data-ng-click="sliderProfile(-1)" style="margin-top:20px;margin-bottom:20px" ng-disabled="disableBackword"><</button>-->
+        <!-- <button class="btn btn-primary ng-hide" data-ng-click="sliderProfile(1)" style="margin-top:20px;margin-bottom:20px" ng-disabled="disableForword" ng-show="showSlider">&gt;</button> -->
+    </div>
+</div>
+<div class="col-8 abtUser dabtUser" style="">
+        <div class="CourseHeading">Angular</div>
+        
+        
+</div>
+
+<div class="col-6 abtUser dabtUser">
+        <accordion>
+                <accordion-group *ngFor="let item of sessionDetails;index as i" [heading]="item.sessionName" [panelClass]="iconUser">
+                  <p class="iconUser"></p>
+                  
+                  <h3>Topics</h3>
+                          <ul>
+                          <li class="topicList" *ngFor="let topic of item.topics">{{topic}} </li>
+                         
+                          
+                          </ul>
+                          <h3>Learning Resources</h3>
+                          <ul>
+                                  <li class="topicList" *ngFor="let resource of item.resources"><a [href]="resource">{{resource}} </a> </li>
+                                  <li class="topicList"><a href="#">Session Example github link </a></li>
+                                  <li class="topicList"><a href="#">Assignment Link</a> </li>
+                                  <li class="topicList"><a href="#">Session Evaluation</a> </li>
+                                  
+                                  
+                                  </ul>
+                </accordion-group>
+                
+              </accordion>
+        <div class=" accordion" id="accordionExample" style="display: none;" >
+             <div *ngFor="let item of sessionDetails;index as i">
+                <div class="card">
+                    <div class="card-header" id="heading{{i}}">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" style="border: none !important" type="button" data-toggle="collapse" data-target="#collapse" aria-expanded="false" aria-controls="collapse">
+                          <div class="iconUser">
+                              <h3>Session 1 - Angular Architecture/Introduction to Modules </h3>
+                           </div>
+                           <div class="sessionInfo">
+                              <div style="float:left;padding-top: 10px;">Session Date: 30-Nov-2019</div>  
+                              <div style="float:right;padding-bottom: 10px;"></div></div></button><button class="btn btn-primary">Mark As Missed</button></h2></div>
+                               
+                            </div>
+                            <div class="col-10"><hr style="border-top: 3px solid black !important;margin-top:2px !important;clear:both"></div>
+  
+                        
+                      
+                    
+                    
+                    <div id="collapse" class="collapse" aria-labelledby="heading" data-parent="#accordionExample" style="">
+                      <div class="card-body">
+                          <div class="col-10 abtData ">
+                              <h3>Topics</h3>
+                          <ul>
+                          <li class="topicList">Angular -What/Why? </li>
+                          <li class="topicList">Angular History </li>
+                          <li class="topicList">MVC Architecture </li>
+                          <li class="topicList">Angular Architecture </li>
+                          <li class="topicList">Introduction to modules</li>
+                          <li class="topicList">NgModule - Metadata </li>
+                          <li class="topicList">Working with Module </li>
+                          
+                          </ul>
+                          <h3>Learning Resources</h3>
+                          <ul>
+                                  <li class="topicList"><a href="#">Session Slides </a> </li>
+                                  <li class="topicList"><a href="#">Session Example github link </a></li>
+                                  <li class="topicList"><a href="#">Assignment Link</a> </li>
+                                  <li class="topicList"><a href="#">Session Evaluation</a> </li>
+                                  
+                                  
+                                  </ul>
+                      </div>
+                      </div>
+                    </div>
+             </div>       
+             
+             <div>
+                <div class="card">
+                    <div class="card-header" id="heading3">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" style="border: none !important" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                          <div class="iconUser">
+                              <h3>Session 1 - Angular Architecture/Introduction to Modules </h3>
+                           </div>
+                           <div class="sessionInfo">
+                              <div style="float:left;padding-top: 10px;">Session Date: 30-Nov-2019</div>  
+                              <div style="float:right;padding-bottom: 10px;"></div></div></button><button class="btn btn-primary">Mark As Missed</button></h2></div>
+                               
+                            </div>
+                            <div class="col-10"><hr style="border-top: 3px solid black !important;margin-top:2px !important;clear:both"></div>
+  
+                        
+                      
+                    
+                    
+                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample" style="">
+                      <div class="card-body">
+                          <div class="col-10 abtData ">
+                              <h3>Topics</h3>
+                          <ul>
+                          <li class="topicList">Angular -What/Why? </li>
+                          <li class="topicList">Angular History </li>
+                          <li class="topicList">MVC Architecture </li>
+                          <li class="topicList">Angular Architecture </li>
+                          <li class="topicList">Introduction to modules</li>
+                          <li class="topicList">NgModule - Metadata </li>
+                          <li class="topicList">Working with Module </li>
+                          
+                          </ul>
+                          <h3>Learning Resources</h3>
+                          <ul>
+                                  <li class="topicList"><a href="#">Session Slides </a> </li>
+                                  <li class="topicList"><a href="#">Session Example github link </a></li>
+                                  <li class="topicList"><a href="#">Assignment Link</a> </li>
+                                  <li class="topicList"><a href="#">Session Evaluation</a> </li>
+                                  
+                                  
+                                  </ul>
+                      </div>
+                      </div>
+                    </div>
+             </div> 
+                        
+                     
+        <div class="card" >
+            <div class="card-header" id="heading2">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" style="border: none !important" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  <div class="iconUser">
+                      <h3>Session 2 - Angular Architecture/Introduction to Modules </h3>
+                   </div>
+                   <div class="sessionInfo">
+                      <div style="float:left;padding-top: 10px;">Session Date: 30-Nov-2019</div>  
+                      <div style="float:right;padding-bottom: 10px;"></div></div></button><button class="btn btn-primary">Mark As Missed</button></h2></div>
+                       
+                    </div>
+                    <div class="col-10"><hr style="border-top: 3px solid black !important;margin-top:2px !important;clear:both"></div>
+
+                
+              
+            
+            
+            <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample" style="">
+              <div class="card-body">
+                  <div class="col-10 abtData ">
+                      <h3>Topics</h3>
+                  <ul>
+                  <li class="topicList">Angular -What/Why? </li>
+                  <li class="topicList">Angular History </li>
+                  <li class="topicList">MVC Architecture </li>
+                  <li class="topicList">Angular Architecture </li>
+                  <li class="topicList">Introduction to modules</li>
+                  <li class="topicList">NgModule - Metadata </li>
+                  <li class="topicList">Working with Module </li>
+                  
+                  </ul>
+                  <h3>Learning Resources</h3>
+                  <ul>
+                          <li class="topicList"><a href="#">Session Slides </a> </li>
+                          <li class="topicList"><a href="#">Session Example github link </a></li>
+                          <li class="topicList"><a href="#">Assignment Link</a> </li>
+                          <li class="topicList"><a href="#">Session Evaluation</a> </li>
+                          
+                          
+                          </ul>
+              </div>
+              </div>
+            </div>
+        
+    </div>                           
+
+
+</div>
+ <div class="col-2 horoDetails dhoroDetails" >
+        <div class="iconUser blink" style="padding-top:10px"> News and Updates</div>
+        
+        <div class="col-10">
+            <hr style="border-top: 3px solid black !important;margin-top:2px !important;clear:both">
+            <div class="col-8 kundaliData blink">
+                <div><b>Class Cancelled for 12/09/2019</b></div>
+                <div class=""></div>
+            </div>
+            <div class="col-8 kundaliData blink">
+                <div><b>Congratulation to Abdal for Placement</b></div>
+                <div class=""> Company Dovur- CTC 6 Lakhs </div>
+            </div>
+            <div class="col-8 kundaliData blink">
+                <div><b>Refer and Earn- Refer your friend and get Reward of INR 1000</b></div>
+                <div class=""></div>
+            </div>
+            <div class="col-8 kundaliData blink">
+                <div><b>Opening in Qdrift-Send resume to info@newstein.in</b></div>
+                <div class=""></div>
+            </div>
+            <!--<div style="clear:both;text-align:center;font-size:20px;margin-top:30px">Kundali Match</div>-->
+            <div class="col-8" style="clear:both;float:left;margin-left:10%;display:none">
+                <div style="float:left"><span class="label label-info">Kundali Not Available</span></div>
+                <div style="float:left;font-size:small;font-style:italic;color:#b1b3b9">Due to Insufficient data,kundali match details is not available</div>
+                <div style="float:left;margin-top:5px"><span class="label label-info">View Compatability</span></div>
+                <div style="float:left;font-size:small;font-style:italic;color:#b1b3b9">Check compatability based on numerology using Compatability button</div>
+
+            </div>
+
+            <div style="clear:both;margin-left:20%;display:none">
+                <button class="btn btn-primary" style="margin-top:10px;margin-bottom:20px" ng-click="CheckCompatability(UserProfile)">
+                    Compatability
+                </button>
+                <!--<button class="btn btn-primary" data-ng-click="ViewHoroscope()" style="margin-top:20px;margin-bottom:20px">View Match Details</button>-->
+            </div>
+        </div>
+    </div>
+    
+    
+
+   
+    
